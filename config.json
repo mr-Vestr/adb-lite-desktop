@@ -1,7 +1,7 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "view": "https://github.com/mr-Vestr/adb-lite-desktop",
-  "link": "http://localhost:1234/ADB Lite Desktop.exe",
+  "link": "http://localhost:1234/ADB_Lite_Desktop.exe",
   "changelog_ru": "• ТЕСТ",
   "changelog_en": "• TEST"
 }
