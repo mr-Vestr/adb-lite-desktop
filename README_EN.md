@@ -46,7 +46,7 @@
 
 ## About
 
-**ADB Lite Desktop** is a companion app for the **ADB Lite** plugin, which is installed in the Telegram clients **exteraGram** and **AyuGram** on Android.
+**ADB Lite Desktop** is a companion app for the **ADB Lite** plugin, which is installed in the Telegram clients **[exteraGram](https://t.me/exteraGram)** and **[AyuGram](https://t.me/AyuGramReleases)** on Android.
 
 The plugin lets you instantly install plugins from your computer to your phone without ADB, root access, or internet — directly over the local network.
 
@@ -75,7 +75,7 @@ The app is written in Python and compiled with PyInstaller.
 | **Linux** | Pre-built binary in [Releases](https://github.com/mr-Vestr/adb-lite-desktop/releases) |
 | **macOS** | Requires self-build. I don't have a Mac :( |
 
-> On Windows, just double-click the file to launch it. On Linux, run the file via terminal by specifying its path.
+> ⚠️ On Windows, just double-click the file to launch it. On Linux, run the file via terminal by specifying its path.
 
 ---
 
@@ -87,7 +87,7 @@ The app is written in Python and compiled with PyInstaller.
 
 3. Follow the in-app instructions to pair your devices.
 
-> Your phone and computer must be on the same Wi-Fi network.
+> ⚠️ Your phone and computer must be on the same Wi-Fi network.
 > If you have connection issues, please contact [@mr_Vestr](https://t.me/mr_Vestr).
 
 ---
