@@ -1,0 +1,11 @@
+APP_NAME = "ADBLite"
+CONFIG_FILENAME = "config.json"
+VERSION = "1.0 (R #1)"
+TIMEOUT_CONNECT = 65
+TIMEOUT_SCAN = 2
+CHECK_INTERVAL = 15
+SUPPORT = "1"
+UPDATE_URL = "https://raw.githubusercontent.com/mr-Vestr/adb-lite-desktop/refs/heads/main/config.json"
+UPDATE_FILENAME = "update_available.json"
+OLD_EXE_SUFFIX = "_oldadblite.exe"
+SHORTCUT_NAME = 'ADB Lite Desktop.lnk'
