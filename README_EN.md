@@ -75,7 +75,7 @@ The app is written in Python and compiled with PyInstaller.
 | **Linux** | Pre-built binary in [Releases](https://github.com/mr-Vestr/adb-lite-desktop/releases) |
 | **macOS** | Requires self-build. I don't have a Mac :( |
 
-> ⚠️ On Windows, just double-click the file to launch it. On Linux, run the file via terminal by specifying its path.
+> ⚠️ On Windows and Linux, simply double-click the file to launch it. However, if that doesn't work on Linux, launch it via the terminal: `./ADB_Lite_Desktop`.
 
 ---
 
