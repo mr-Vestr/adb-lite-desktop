@@ -74,7 +74,47 @@ def handle_exception(exc_type, exc_value, exc_traceback):
     sys.__excepthook__(exc_type, exc_value, exc_traceback)
 
 
+def _relaunch_in_linux_terminal():
+    if platform.system() != 'Linux':
+        return
+    if os.environ.get('ADB_LITE_RELAUNCHED') == '1':
+        return
+    if not getattr(sys, 'frozen', False):
+        return
+    try:
+        if sys.stdin.isatty() and sys.stdout.isatty():
+            return
+    except Exception:
+        return
+    import shutil
+    import subprocess
+    import time
+    app = os.path.abspath(sys.argv[0])
+    terminals = [
+        ('x-terminal-emulator', ('-e',)),
+        ('gnome-terminal', ('--',)),
+        ('konsole', ('-e',)),
+        ('xfce4-terminal', ('-e',)),
+        ('mate-terminal', ('-e',)),
+        ('lxterminal', ('-e',)),
+        ('xterm', ('-e',)),
+    ]
+    for name, flags in terminals:
+        path = shutil.which(name)
+        if not path:
+            continue
+        env = os.environ.copy()
+        env['ADB_LITE_RELAUNCHED'] = '1'
+        try:
+            subprocess.Popen([path, *flags, app], env=env)
+            time.sleep(1.5)
+            os._exit(0)
+        except Exception:
+            continue
+
+
 def main():
+    _relaunch_in_linux_terminal()
     set_console_title("ADB Lite Desktop")
     logger = None
     try:
